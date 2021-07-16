@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+img {
+  border-radius: 1em;
+}
+
+.caption-display {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.wrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.list-pane {
+  width: 200px;
+  flex: 0 0 auto;
+}
+
+.item {
+  height: 60px;
+  display: flex;
+  padding: 0.5em;
+  gap: 1em;
+  align-items: center;
+  border-radius: 0.5em;
+  margin: 5px;
+  cursor: move;
+}
+
+.item-image {
+  flex: 0 0 auto;
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+}
+
+.item-caption {
+  /* white-space: nowrap; */
+  overflow: hidden;
+  padding: 1px;
+}
+
+.preview-pane {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.preview-pane > img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+.preview-pane > * {
+  text-align: center;
+}
+
+/* Class for the selected item from item list */
+.selected-item {
+  background: paleturquoise;
+}
+
+.dragged {
+  opacity: 0.4;
+}
+
+@media (max-width: 550px) {
+  .item-caption {
+    display: none;
+  }
+
+  .list-pane {
+    width: 60px;
+  }
+
+  .item {
+    width: 100%;
+  }
+}
